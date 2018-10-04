@@ -1,5 +1,7 @@
 {
   "name": "mockupD",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

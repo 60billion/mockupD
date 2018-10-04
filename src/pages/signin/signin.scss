@@ -1,0 +1,24 @@
+page-signin{
+    .signinText{
+        color:#BA55D3; 
+        font-size: 200%; 
+        text-align: center; 
+        font-weight: bold; 
+        margin-top:30px; 
+        margin-bottom:30px;
+    }
+    ion-list {
+        ion-icon{
+            color:#BA55D3;
+        }
+        span{
+            margin-left:130px;
+            color:#BA55D3;
+        }
+       
+    }
+    ion-content button{
+        margin-top:30px;
+    }
+
+}

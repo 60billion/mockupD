@@ -1,0 +1,21 @@
+.tabbar {
+	a.tab-button[aria-selected=true]:nth-of-type(1) {
+		color: rgb(255,255,255);
+		.tab-button-icon {
+			color: rgb(255,255,255);
+		}
+	}
+	a.tab-button[aria-selected=true]:nth-of-type(2) {
+		color: rgb(255,255,255);
+		.tab-button-icon {
+			color: rgb(255,255,255);
+		}
+	}
+	a.tab-button[aria-selected=true]:nth-of-type(3) {
+		color: rgb(255,255,255);
+		.tab-button-icon {
+			color: rgb(255,255,255);
+		}
+	}
+
+}

@@ -1,0 +1,85 @@
+<ion-header>
+    <ion-navbar class="navLogo"> 
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list class="backg">
+        <ion-card class="member">
+            <div class="top">올리뷰 로그인/회원가입</div>
+            <div class="down"> <small>좋아요리스트/상품구매가 쉬워집니다.</small> </div> 
+        </ion-card>
+        <ion-item-group>
+
+            <ion-item-divider color="light"><strong>주문상품</strong></ion-item-divider>
+            <ion-item>
+                <ion-label color="primary">상품이름:</ion-label>
+                <ion-input value="나이키신발" disabled></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary">상품수량:</ion-label>
+                <ion-input value={{count}} disabled></ion-input>
+                <ion-icon ios="ios-arrow-dropup" md="md-arrow-dropup" item-end></ion-icon>
+                <ion-icon ios="ios-arrow-dropdown" md="md-arrow-dropdown" item-end></ion-icon>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary" type="number">상품가격:</ion-label>
+                <ion-input value={{cost}} disabled></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary" type="number">총가격:</ion-label>
+                <ion-input value={{total}} disabled></ion-input>
+            </ion-item>
+
+            <ion-item-divider color="light"><strong>주문자</strong></ion-item-divider>
+            <ion-item>
+                <ion-label color="primary">이름:</ion-label>
+                <ion-input value="홍길동" disabled></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary" type="tel">전화번호:</ion-label>
+                <ion-input value="010-7569-9696" disabled></ion-input>
+            </ion-item>
+
+            <ion-item-divider color="light">
+                <ion-label>
+                    <strong>
+                        받는사람:
+                    </strong>
+                    <small style="margin-left:40%">
+                        회원가입시 주소저장 가능
+                    </small>
+                </ion-label>
+                <ion-checkbox [(ngModel)]="pepperoni" item-end></ion-checkbox>
+            </ion-item-divider>
+            <ion-item>
+                    <ion-label color="primary">이름:</ion-label>
+                    <ion-input value="홍길동" disabled></ion-input>
+            </ion-item>
+            <ion-item>
+                    <ion-label color="primary" type="tel">전화번호:</ion-label>
+                    <ion-input value="010-8586-5962"></ion-input>
+            </ion-item>
+            <ion-item>
+                    <ion-label color="primary">주소:</ion-label>
+                    <ion-input value="서울시 테헤란로 2길 8" disabled></ion-input>
+                    <ion-icon ios="ios-map" md="md-map" item-end></ion-icon>
+            </ion-item>
+            <ion-item>
+                    <ion-label color="primary">배송메모:</ion-label>
+                    <ion-input value="경비실에 맡겨주세요." disabled></ion-input>
+            </ion-item>
+
+
+            <ion-item-divider color="light">
+                <strong>
+                    결제방법
+                </strong>
+            </ion-item-divider>
+            <ion-item>ionic segment</ion-item>
+            
+        </ion-item-group>
+        <button ion-button full color="tab">결제하기</button>
+    </ion-list>
+
+    
+</ion-content>

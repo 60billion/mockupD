@@ -1,0 +1,53 @@
+<ion-header>
+
+</ion-header>
+<ion-content>
+
+    <div class="mainProCard">
+    <iframe width="420" height="345" src="https://www.youtube.com/embed/JKp2JMXuYak" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen (load)="dismissLoading()"></iframe>
+    <ion-item class="mainProfile" no-lines no-margin>
+    <ion-avatar item-start>
+        <img src="../../assets/sampleImg/sample1.jpg"> 
+    </ion-avatar>
+    <h5>공익나눔</h5>
+    <p style="font-weight: bold;">청각장애인의 꿈을 밝히는 ‘메인오브제’ 조명</p>
+    <ion-icon ios="ios-heart-outline" md="md-heart-outline" item-end></ion-icon>
+    </ion-item>
+    </div>
+
+    <ion-segment [(ngModel)]="itemDetail" color="tab">
+        <ion-segment-button value="info" block>
+            <strong>상품정보</strong> 
+        </ion-segment-button>
+        <ion-segment-button value="sellerInfo" block>
+            <strong>업체정보</strong>
+        </ion-segment-button>
+        <ion-segment-button value="qa" block>
+            <strong>Q&A</strong>
+        </ion-segment-button>
+        <ion-segment-button value="review" block>
+            <strong>구매후기</strong>
+        </ion-segment-button>
+    </ion-segment>
+
+    <div [ngSwitch]="itemDetail">
+        <ion-list *ngSwitchCase="'info'">
+            info
+        </ion-list>
+        <ion-list *ngSwitchCase="'sellerInfo'">
+            sllerInfo
+        </ion-list>
+        <ion-list *ngSwitchCase="'qa'">
+            q&a
+        </ion-list>
+        <ion-list *ngSwitchCase="'review'">
+            review
+        </ion-list>
+    </div>
+
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+        <button ion-button full color="tab" (click)="purchase()">구매하기</button>
+    </ion-toolbar>
+</ion-footer>

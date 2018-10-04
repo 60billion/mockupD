@@ -38,7 +38,8 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  tab:        #BA55D3
 );
 
 
@@ -69,7 +70,8 @@ $colors: (
 // then be future customized. This import comes last
 // so that the above variables are used and Ionic's
 // default are overridden.
-
+$text-input-highlight-color-valid: #BA55D3;
+$text-input-md-highlight-color:#BA55D3;
 @import "ionic.theme.default";
 
 

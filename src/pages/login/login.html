@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-navbar class="navLogo">
+        <ion-buttons left>
+            <button ion-button icon-only (click)="modalPop()">
+                <ion-icon name="arrow-back"></ion-icon>
+            </button>
+        </ion-buttons> 
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <div class="signin" (click)="intoSignin()">
+        <u>올리뷰 회원가입</u>
+    </div>
+    <div class="loginText">
+        로그인
+    </div>
+    
+    <ion-list>
+        <ion-item>
+            <ion-label fixed>이메일</ion-label>
+            <ion-input #input type="text" value=""></ion-input>
+        </ion-item>
+        
+        <ion-item>
+            <ion-label fixed>비밀번호</ion-label>
+            <ion-input type="password"></ion-input>
+        </ion-item>
+
+        <ion-item class="findPwd">
+            <u>비밀번호 찾기</u>
+        </ion-item>
+    </ion-list>
+    <ion-fab center middle>
+        <button ion-fab color="tab" class="fab">시작</button>
+    </ion-fab>
+</ion-content>

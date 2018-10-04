@@ -1,0 +1,75 @@
+<ion-header>
+    <ion-navbar class="navLogo">
+        <ion-buttons left>
+            <button ion-button icon-only (click)="modalPop()">
+                <ion-icon name="arrow-back"></ion-icon>
+            </button>
+        </ion-buttons> 
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <div class="signinText">
+        회원가입
+    </div>
+    
+    <ion-list>
+        <ion-item>
+            <ion-label fixed><strong>이름</strong></ion-label>
+            <ion-input #input type="text" placeholder="본명권장" [(ngModel)]="name" (ionChange)="checkName()" (tap)="checkName()"></ion-input>
+            <ion-icon *ngIf="names==true" ios="ios-checkmark" md="md-checkmark" item-end></ion-icon>
+            <ion-icon *ngIf="names==false" ios="ios-sad" md="md-sad" item-end></ion-icon>
+        </ion-item>
+            <span *ngIf="names==false">이름을 입력해주세요</span>
+
+        <ion-item>
+            <ion-label fixed><strong>이메일</strong></ion-label>
+            <ion-input type="email" placeholder="로그인, 비번 분실시 필요. 정확히 입력" [(ngModel)]="email" (ionChange)="checkEmail()" (tap)="checkEmail()"></ion-input>
+            <ion-icon *ngIf="emails==true" ios="ios-checkmark" md="md-checkmark" item-end></ion-icon>
+            <ion-icon *ngIf="emails==false" ios="ios-sad" md="md-sad" item-end></ion-icon>
+        </ion-item>
+            <span *ngIf="emails==false">이메일이 중복되거나 형식이 잘못 됬습니다.</span>
+
+
+        <ion-item>
+            <ion-label fixed><strong>비밀번호</strong></ion-label>
+            <ion-input type="password" placeholder="6자리이상" [(ngModel)]="password" (ionChange)="checkPassword()" (tap)="checkPassword()"></ion-input>
+            <ion-icon *ngIf="passwords==true" ios="ios-checkmark" md="md-checkmark" item-end></ion-icon>
+            <ion-icon *ngIf="passwords==false" ios="ios-sad" md="md-sad" item-end></ion-icon>
+        </ion-item>
+            <span *ngIf="passwords==false">비밀번호를 6자 이상 입력해주세요.</span>
+
+
+        <ion-item>
+            <ion-label fixed><strong>비번확인</strong></ion-label>
+            <ion-input type="password" placeholder="비밀번호 한번 더 입력" [(ngModel)]="passwordCheck" (ionChange)="checkPasswordCheck()" (tap)="checkPasswordCheck()"></ion-input>
+            <ion-icon *ngIf="passwordChecks==true" ios="ios-checkmark" md="md-checkmark" item-end></ion-icon>
+            <ion-icon *ngIf="passwordChecks==false" ios="ios-sad" md="md-sad" item-end></ion-icon>
+        </ion-item>
+            <span *ngIf="passwordChecks==false">비밀번호가 일치 하지 않습니다.</span>
+
+
+        <ion-item no-lines>
+
+        </ion-item>
+
+    </ion-list>
+    
+    <div *ngIf="submit==true">
+        <ul (click)="showAgreement()">
+            <li> 서비스 이용약관</li>
+            <li> 개인정보 수집 및 이용동의</li>
+            <li> 개인정보 처리 방침</li>
+        </ul>
+        
+        <div text-center>
+            <ion-item  no-lines>
+                <ion-label>본인은 만 14세 이상이며, 위 약관에 동의합니다.</ion-label>
+                <ion-checkbox [(ngModel)]="agree"></ion-checkbox>
+            </ion-item>
+
+            <button *ngIf="agree==true" ion-button color="tab">가입</button>
+            <button *ngIf="agree==false" ion-button color="tab" disabled>가입</button>
+        </div>
+    </div>
+
+</ion-content>
